@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../js/vue.js"></script>
+    <title>vue3 初体验</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <template id="cpn1">
+      <h2>{{greeting}}</h2>
+      <button v-on:click="start">Let's go!</button>
+    </template>
+
+    <script>
+      Vue.createApp({
+        template: '#cpn1',
+        data() {
+          return {
+            greeting: 'Hello, Vue3!'
+          }
+        },
+        methods: {
+          start() {
+            console.log('Program is starting...')
+          }
+        }
+      }).mount('#app')
+    </script>
+  </body>
+</html>
